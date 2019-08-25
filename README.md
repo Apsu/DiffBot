@@ -33,6 +33,16 @@ A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png
 
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together.
 
+## Backlash
+
+A major consideration when using screws, nuts, or gears is backlash. Backlash is when mating surfaces that transfer motion in one direction have some 'play' when the direction is reversed, before the mating surfaces engage again the other way. This leads to a loss of synchronization between the input and output, and accuracy suffers.
+
+The proposed gearbox makes use of dual screw nuts preloaded with a spring. The right nut in the picture can rotate freely, which allows the spring to keep it pushed against the screw threads to the right. Likewise, the spring pushes the left nut (attached to the gear) to the left, keeping it preloaded against the screw threads to the left. Therefore, either direction the screw spins, the backlash is taken up.
+
+Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up. The same spring preloading the screw nuts also preloads the `Y` gears by pushing them into the `X` gears.
+
+With any preloading/anti-backlash system, wear is a concern. With proper lubrication on the nuts and gears, and with the proper spring strength, wear should be minimal since the gantry load is relatively small compared to the strength of the materials.
+
 ## Comparison to H-Bot
 
     TODO
