@@ -31,7 +31,7 @@ When driving the `Y` screws in opposite directions from each other, they will at
 
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
-> Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together.
+> Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
 
 ## Backlash
 
@@ -45,7 +45,7 @@ With any preloading/anti-backlash system, wear is a concern. With proper lubrica
 
 ## Comparison to H-Bot
 
-    TODO
+
 
 ## Comparison to CoreXY
 
