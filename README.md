@@ -63,6 +63,8 @@ Given this fact, the twisting torque on the `X` guide is far less than with belt
 
 `CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and idlers instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
 
+A kinematic diagram is provided: ![CoreXY](CoreXY.png)
+
 `ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
 
 ## Unique Features
