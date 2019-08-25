@@ -53,6 +53,8 @@ The traditional H-Bot gantry uses the same layout and two motors, and operates w
 
 When the `X` carriage is moved, the sharp right angles on the idlers of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
 
+An diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
+
 ParaBot attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
 
 Given this fact, the twisting torque on the `X` guide is far less than with belts. That makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
