@@ -29,6 +29,8 @@ When driving the `Y` screws in the same direction, they will attempt to drive th
 
 When driving the `Y` screws in opposite directions, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
+An illustration of the gearing motions can be seen here: ![motion](https://i.imgur.com/ZMlRJXW.mp4)
+
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
