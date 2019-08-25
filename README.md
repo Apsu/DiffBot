@@ -25,13 +25,17 @@ As seen in the diagram, we use two motors to drive the `Y` lead screws (which us
 - The `Y` gear is attached to a screw nut which is able to rotate freely with the screw, as well as travel down the screw.
 - The `X` gear is attached to the `X` lead screw, and rotates with it, in place.
 
-When driving the `Y` screws in the same direction, they will attempt to drive the `X` gears in opposite directions, causing them to cog and lock. This will allow the `Y` nuts to push the gearboxes along the `Y` guides.
+When driving the `Y` screws in the same direction, they will attempt to drive the `X` gears in opposite directions, causing both gears to cog and lock. This will allow the `Y` nuts to push the gearboxes along the `Y` guides.
 
-When driving the `Y` screws in opposite directions from each other, they will attempt to move each `Y` nut in opposite directions along `Y`, causing them to cog and lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
+When driving the `Y` screws in opposite directions from each other, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
+
+Lastly, the lead screws' `lead` specification dictates how far a driven nut will travel per revolution. It does not apply when the nut is spinning with the screw, but in this design, when the `Y` nuts spin in place, the equal-sized gears transmit the rotation to the `X` screw, which drives the `X` carriage via its own nut. Therefore both axes are driven at the same mm/revolution rate that the screw `lead` dictates.
+
+> See the H-Bot comparison for details about why a higher screw lead is preferable for dealing with the cogging forces of differential drives.
 
 ## Backlash
 
@@ -45,7 +49,13 @@ With any preloading/anti-backlash system, wear is a concern. With proper lubrica
 
 ## Comparison to H-Bot
 
+The traditional H-Bot gantry uses the same layout and two motors, and operates with the same differential kinematics. The motors are connected via a long continuous belt path around idlers to change the direction, ultimately connecting to either side of the `X` carriage.
 
+When the `X` carriage is moved, the sharp right angles on the idlers of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
+
+ParaBot attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
+
+Given this fact, the twisting torque on the `X` guide is far less than with belts. That makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
 
 ## Comparison to CoreXY
 
