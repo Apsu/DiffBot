@@ -18,7 +18,7 @@ The unique aspect of this design is how the `Y` guide leadscrews are attached to
 
 ## Design Details
 
-![kinematics](Kinematics.png)
+![Kinematics](Kinematics.png)
 
 As seen in the diagram, we use two motors to drive the `Y` lead screws (which use the same handedness thread), into a gearbox assembly attached to each `Y` carriage. In this gearbox are two bevel gears:
 
@@ -29,9 +29,9 @@ When driving the `Y` screws in the same direction, they will attempt to drive th
 
 When driving the `Y` screws in opposite directions, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
-An illustration of the gearing motions can be seen here: ![Imgur](https://i.imgur.com/ePLM0TZ.gif)
+An illustration of the gearing motions can be seen here: ![Motion](Motion.gif)
 
-A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
+A detailed view of a proposed gearbox design is provided: ![Gearbox](Gearbox.png)
 
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
 
