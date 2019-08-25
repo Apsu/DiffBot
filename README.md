@@ -16,9 +16,9 @@ The major difference is that `ParaBot` uses leadscrews to drive both `Y` and `X`
 
 The unique aspect of this design is how the `Y` guide leadscrews are attached to the `Y` carriages, and how they transmit differential motion to the `X` carriage.
 
-A kinematic diagram is provided: ![kinematics](Kinematics.png)
-
 ## Design Details
+
+![kinematics](Kinematics.png)
 
 As seen in the diagram, we use two motors to drive the `Y` lead screws (which use the same handedness thread), into a gearbox assembly attached to each `Y` carriage. In this gearbox are two bevel gears:
 
@@ -53,7 +53,7 @@ The traditional `H-Bot` gantry uses the same layout and two motors, and operates
 
 When the `X` carriage is moved, the sharp right angles on the pulleys of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
 
-An diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
+A diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
 
 `ParaBot` attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut along with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw `lead` is.
 
@@ -61,11 +61,11 @@ Given this fact, the twisting torque on the `X` guide is far less than with belt
 
 ## Comparison to CoreXY
 
+![CoreXY](CoreXY.png)
+
 `CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and pulleys instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
 
-A kinematic diagram is provided: ![CoreXY](CoreXY.png)
-
-`ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
+> `ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
 
 ## Unique Features
 
