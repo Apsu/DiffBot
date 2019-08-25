@@ -27,7 +27,7 @@ As seen in the diagram, we use two motors to drive the `Y` lead screws (which us
 
 When driving the `Y` screws in the same direction, they will attempt to drive the `X` gears in opposite directions, causing both gears to cog and lock. This will allow the `Y` nuts to push the gearboxes along the `Y` guides.
 
-When driving the `Y` screws in opposite directions from each other, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
+When driving the `Y` screws in opposite directions, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
