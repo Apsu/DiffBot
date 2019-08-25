@@ -12,7 +12,7 @@ We'll cover the design details first, comparing to the two major current designs
 
 > For easy reference, we will consider the parallel guides the `Y` axis, and the moving guide the `X` axis.
 
-The major difference is that `ParaBot` uses leadscrews to drive both `Y` and `X`, through a differential system. Kinematically, it's identical to H-Bot, and firmware which supports it will also work here.
+The major difference is that `ParaBot` uses leadscrews to drive both `Y` and `X`, through a differential system. Kinematically, it's identical to `H-Bot`, and firmware which supports it will also work here.
 
 The unique aspect of this design is how the `Y` guide leadscrews are attached to the `Y` carriages, and how they transmit differential motion to the `X` carriage.
 
