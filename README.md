@@ -29,7 +29,7 @@ When driving the `Y` screws in the same direction, they will attempt to drive th
 
 When driving the `Y` screws in opposite directions, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
-An illustration of the gearing motions can be seen here: ![motion](https://i.imgur.com/ZMlRJXW.gif)
+An illustration of the gearing motions can be seen here: ![motion](https://i.imgur.com/u2RL52K.gif)
 
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
