@@ -20,16 +20,16 @@ A kinematic diagram is provided: ![kinematics](Kinematics.png)
 
 ## Design Details
 
-As seen in the diagram, we use two motors to drive the `Y` lead screws (which use the same handedness thread), into a gearbox assembly attached to each `Y` carriage. In this gearbox are two bevel gears:
+As seen in the diagram, we use two motors to drive the `Y` lead screws (which use the same handedness thread), into a gearbox assembly attached to each `Y` carriage. In this gearbox are three bevel gears:
 
-- The `Y` gear is attached to a screw nut which is able to rotate freely with the screw, as well as travel down the screw.
+- The `Y` gears are each attached to a screw nut which is able to rotate freely with the `Y` screw, as well as travel down the threads if held in place.
 - The `X` gear is attached to the `X` lead screw, and rotates with it, in place.
 
 When driving the `Y` screws in the same direction, they will attempt to drive the `X` gears in opposite directions, causing both gears to cog and lock. This will allow the `Y` nuts to push the gearboxes along the `Y` guides.
 
-When driving the `Y` screws in opposite directions, they will attempt to move each `Y` nut in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
+When driving the `Y` screws in opposite directions, they will attempt to move each `Y` gear/nut pair in opposite directions along `Y`, causing `Y` motion to lock. But they are still free to rotate in place, driving the `X` gears in the same direction, which will push the `X` carriage along the `X` guide.
 
-A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
+A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox_Doublesided.png)
 
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
 
@@ -41,7 +41,7 @@ Lastly, the lead screws' `lead` specification dictates how far a driven nut will
 
 A major consideration when using screws, nuts, or gears is backlash. Backlash is when mating surfaces that transfer motion in one direction have some 'play' when the direction is reversed, before the mating surfaces engage again the other way. This leads to a loss of synchronization between the input and output, and accuracy suffers.
 
-The proposed gearbox makes use of dual screw nuts preloaded with a spring. The right nut in the picture can rotate freely, which allows the spring to keep it pushed against the screw threads to the right. Likewise, the spring pushes the left nut (attached to the gear) to the left, keeping it preloaded against the screw threads to the left. Therefore, either direction the screw spins, the backlash is taken up.
+The proposed gearbox makes use of dual screw nuts preloaded with springs. The nuts in the picture can rotate freely, which allows their springs to keep them pushed against the screw threads in each direction. Therefore, either direction the screw spins, the backlash is taken up.
 
 Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up. The same spring preloading the screw nuts also preloads the `Y` gears by pushing them into the `X` gears.
 
@@ -55,13 +55,15 @@ When the `X` carriage is moved, the sharp right angles on the idlers of the `Y` 
 
 An diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
 
-`ParaBot` attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
+`ParaBot` attempts to solve this problem because of the unique method of differentially driving lead screw nuts and the gear arrangement. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
 
-Given this fact, the twisting torque on the `X` guide is far less than with belts. That makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
+In addition, the two `Y` gears exert their differential forces oppositely, balancing the twisting force on the `X` guide. That makes it easier and cheaper to use guides that don't have to deal with this torque without losing alignment.
 
 ## Comparison to CoreXY
 
 `CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and idlers instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
+
+This balance of forces in differential drive is what the `ParaBot` gearing system is attempting to accomplish without the use of belts.
 
 ## Unique Features
 
