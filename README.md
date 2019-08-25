@@ -65,6 +65,7 @@ Given this fact, the twisting torque on the `X` guide is far less than with belt
 
 A kinematic diagram is provided: ![CoreXY](CoreXY.png)
 
+
 > `ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
 
 ## Unique Features
