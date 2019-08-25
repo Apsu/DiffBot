@@ -57,7 +57,9 @@ A diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://f
 
 `ParaBot` attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut along with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw `lead` is.
 
-Given this fact, the twisting torque on the `X` guide is far less than with belts. That makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
+In addition, the magnitude of differential forces depends on the distance from the `X` guide the force is being applied, since any distance will act as a lever. The example gearbox design attaches the `X` guide co-linearly with the `X` screw, which is very close to the `Y` nuts that will apply the differential forces to the gearbox. This should further reduce the cogging torque across the `X` guide's length since the angle between the opposite `Y` nuts is relatively small.
+
+Given this setup, the twisting torque on the `X` guide should be far less than with belts. This makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
 
 ## Comparison to CoreXY
 
