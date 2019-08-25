@@ -8,7 +8,7 @@ We'll cover the design details first, comparing to the two major current designs
 
 ## Overview
 
-ParaBot uses a gantry layout where parallel linear guides are placed on top of the frame, comprising one axis, and another linear guide perpindicular to the first two, riding on their carriages. This layout is shared by H-Bot and CoreXY; H-Bot was named because the gantry resembles the letter `H`.
+ParaBot uses a gantry layout where parallel linear guides are placed on top of the frame, comprising one axis, and another linear guide perpendicular to the first two, riding on their carriages. This layout is shared by H-Bot and CoreXY; H-Bot was named because the gantry resembles the letter `H`.
 
 > For easy reference, we will consider the parallel guides the `Y` axis, and the moving guide the `X` axis.
 
