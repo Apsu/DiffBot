@@ -2,17 +2,17 @@
 
 ## Background
 
-ParaBot is an evolution of the H-Bot/CoreXY style of parallel, differential, Cartesian XY gantry. It is most similar to the H-Bot system, but attempts to solve several problems, both specific to H-Bots as well as 3D printers of this kind in general.
+`ParaBot` is an evolution of the `H-Bot/CoreXY` style of parallel, differential, Cartesian XY gantry. It is most similar to the `H-Bot` system, but attempts to solve several problems, both specific to `H-Bots` as well as 3D printers of this kind in general.
 
 We'll cover the design details first, comparing to the two major current designs, and then discuss the new capabilities it provides.
 
 ## Overview
 
-ParaBot uses a gantry layout where parallel linear guides are placed on top of the frame, comprising one axis, and another linear guide perpendicular to the first two, riding on their carriages. This layout is shared by H-Bot and CoreXY; H-Bot was named because the gantry resembles the letter `H`.
+`ParaBot` uses a gantry layout where parallel linear guides are placed on top of the frame, comprising one axis, and another linear guide perpendicular to the first two, riding on their carriages. This layout is shared by `H-Bot` and `CoreXY`; `H-Bot` was named because the gantry resembles the letter `H`.
 
 > For easy reference, we will consider the parallel guides the `Y` axis, and the moving guide the `X` axis.
 
-The major difference is that ParaBot uses leadscrews to drive both `Y` and `X`, through a differential system. Kinematically, it's identical to H-Bot, and firmware which supports it will also work here.
+The major difference is that `ParaBot` uses leadscrews to drive both `Y` and `X`, through a differential system. Kinematically, it's identical to H-Bot, and firmware which supports it will also work here.
 
 The unique aspect of this design is how the `Y` guide leadscrews are attached to the `Y` carriages, and how they transmit differential motion to the `X` carriage.
 
@@ -35,7 +35,7 @@ A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png
 
 Lastly, the lead screws' `lead` specification dictates how far a driven nut will travel per revolution. It does not apply when the nut is spinning with the screw, but in this design, when the `Y` nuts spin in place, the equal-sized gears transmit the rotation to the `X` screw, which drives the `X` carriage via its own nut. Therefore both axes are driven at the same mm/revolution rate that the screw `lead` dictates.
 
-> See the H-Bot comparison for details about why a higher screw lead is preferable for dealing with the cogging forces of differential drives.
+> See the `H-Bot` comparison for details about why a higher screw lead is preferable for dealing with the cogging forces of differential drives.
 
 ## Backlash
 
@@ -49,19 +49,19 @@ With any preloading/anti-backlash system, wear is a concern. With proper lubrica
 
 ## Comparison to H-Bot
 
-The traditional H-Bot gantry uses the same layout and two motors, and operates with the same differential kinematics. The motors are connected via a long continuous belt path around idlers to change the direction, ultimately connecting to either side of the `X` carriage.
+The traditional `H-Bot` gantry uses the same layout and two motors, and operates with the same differential kinematics. The motors are connected via a long continuous belt path around idlers to change the direction, ultimately connecting to either side of the `X` carriage.
 
 When the `X` carriage is moved, the sharp right angles on the idlers of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
 
 An diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
 
-ParaBot attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
+`ParaBot` attempts to solve this problem because of the unique method of differentially driving lead screw nuts. It takes less torque for turning the nut with the screw (in place) than driving the nut down the screw (locking the rotation). This difference becomes greater the longer the screw lead is.
 
 Given this fact, the twisting torque on the `X` guide is far less than with belts. That makes it easier and cheaper to use guides that can deal with this torque without losing alignment.
 
 ## Comparison to CoreXY
 
-    TODO
+`CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and idlers instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
 
 ## Unique Features
 
