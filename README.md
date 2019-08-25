@@ -49,9 +49,9 @@ With any preloading/anti-backlash system, wear is a concern. With proper lubrica
 
 ## Comparison to H-Bot
 
-The traditional `H-Bot` gantry uses the same layout and two motors, and operates with the same differential kinematics. The motors are connected via a long continuous belt path around idlers to change the direction, ultimately connecting to either side of the `X` carriage.
+The traditional `H-Bot` gantry uses the same layout and two motors, and operates with the same differential kinematics. The motors are connected via a long continuous belt path around pulleys to change the direction, ultimately connecting to either side of the `X` carriage.
 
-When the `X` carriage is moved, the sharp right angles on the idlers of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
+When the `X` carriage is moved, the sharp right angles on the pulleys of the `Y` carriages cause a twisting force (torque) on the `X` guide, which can cause it to go out of alignment if the guides/carriages aren't stiff or long enough to absorb the forces.
 
 An diagram of the issue is provided (from [Gianluca Pugliese/FabAcademy](http://fabacademy.org/archives/2015/eu/students/pugliese.gianluca/project02.html)): ![HBot](HBot.jpg)
 
@@ -61,11 +61,11 @@ Given this fact, the twisting torque on the `X` guide is far less than with belt
 
 ## Comparison to CoreXY
 
-`CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and idlers instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
+`CoreXY` is an evolution of the basic `H-Bot`, as a method of solving the torque issue. It has equal and opposite attachment points to the `X` carriage by using two long belts and pulleys instead of just one. It is essentially two `H-Bot` systems on top of each other, to balance the forces.
 
 A kinematic diagram is provided: ![CoreXY](CoreXY.png)
 
-`ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
+> `ParaBot` may be able to balance the forces entirely with a more complex gearbox, but the differential forces are minor relative to the screw `lead` torque difference, so it's probably not necessary.
 
 ## Unique Features
 
