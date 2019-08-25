@@ -10,7 +10,7 @@ We'll cover the design details first, comparing to the two major current designs
 
 ParaBot uses a gantry layout where parallel linear guides are placed on top of the frame, comprising one axis, and another linear guide perpindicular to the first two, riding on their carriages. This layout is shared by H-Bot and CoreXY; H-Bot was named because the gantry resembles the letter `H`.
 
-    For easy reference, we will consider the parallel guides the `Y` axis, and the moving guide the `X` axis.
+> For easy reference, we will consider the parallel guides the `Y` axis, and the moving guide the `X` axis.
 
 The major difference is that ParaBot uses leadscrews to drive both `Y` and `X`, through a differential system. Kinematically, it's identical to H-Bot, and firmware which supports it will also work here.
 
@@ -31,7 +31,7 @@ When driving the `Y` screws in opposite directions from each other, they will at
 
 A detailed view of a proposed gearbox design is provided: ![gearbox](Gearbox.png)
 
-    Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together.
+> Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together.
 
 ## Comparison to H-Bot
 
