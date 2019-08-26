@@ -33,6 +33,8 @@ An illustration of the gearing motions can be seen here: ![Motion](Motion.gif)
 
 A detailed view of a proposed gearbox design is provided: ![Gearbox](Gearbox.png)
 
+And with certain parts transparent to see interior details: ![X-Ray](Gearbox_Xray.png)
+
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
 
 Lastly, the lead screws' `lead` specification dictates how far a driven nut will travel per revolution. It does not apply when the nut is spinning with the screw, but in this design, when the `Y` nuts spin in place, the equal-sized gears transmit the rotation to the `X` screw, which drives the `X` carriage via its own nut. Therefore both axes are driven at the same mm/revolution rate that the screw `lead` dictates.
@@ -43,9 +45,9 @@ Lastly, the lead screws' `lead` specification dictates how far a driven nut will
 
 A major consideration when using screws, nuts, or gears is backlash. Backlash is when mating surfaces that transfer motion in one direction have some 'play' when the direction is reversed, before the mating surfaces engage again the other way. This leads to a loss of synchronization between the input and output, and accuracy suffers.
 
-The proposed gearbox makes use of dual screw nuts preloaded with a spring. The right nut in the picture can rotate freely, which allows the spring to keep it pushed against the screw threads to the right. Likewise, the spring pushes the left nut (attached to the gear) to the left, keeping it preloaded against the screw threads to the left. Therefore, either direction the screw spins, the backlash is taken up.
+The proposed gearbox makes use of dual screw nuts preloaded with a spring. The two nuts are pushed apart, forming an anti-backlash nut pair. Bolts are used through the flanges, threaded through a small insert to keep them in place, but not providing clamping force. Therefore, either direction the screw spins, the backlash is taken up.
 
-Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up. The same spring preloading the screw nuts also preloads the `Y` gears by pushing them into the `X` gears.
+Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up. The rightmost spring preloads the `Y` gear/nut assembly by pushing it into the `X` gears.
 
 With any preloading/anti-backlash system, wear is a concern. With proper lubrication on the nuts and gears, and with the proper spring strength, wear should be minimal since the gantry load is relatively small compared to the strength of the materials.
 
