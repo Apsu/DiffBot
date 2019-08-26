@@ -33,8 +33,6 @@ An illustration of the gearing motions can be seen here: ![Motion](Motion.gif)
 
 A detailed view of a proposed gearbox design is provided: ![Gearbox](Gearbox.png)
 
-And with certain parts transparent to see interior details: ![X-Ray](Gearbox_Xray.png)
-
 > Care was taken to ensure that both the nuts and gears are preloaded against backlash, as well as providing low-friction mating surfaces and bosses, for pieces that have to rotate against each other. Clamping and insertion points are provided for pieces that have to rotate together. The following section discusses backlash in detail.
 
 Lastly, the lead screws' `lead` specification dictates how far a driven nut will travel per revolution. It does not apply when the nut is spinning with the screw, but in this design, when the `Y` nuts spin in place, the equal-sized gears transmit the rotation to the `X` screw, which drives the `X` carriage via its own nut. Therefore both axes are driven at the same mm/revolution rate that the screw `lead` dictates.
@@ -44,6 +42,8 @@ Lastly, the lead screws' `lead` specification dictates how far a driven nut will
 ## Backlash
 
 A major consideration when using screws, nuts, or gears is backlash. Backlash is when mating surfaces that transfer motion in one direction have some 'play' when the direction is reversed, before the mating surfaces engage again the other way. This leads to a loss of synchronization between the input and output, and accuracy suffers.
+
+![X-Ray](Gearbox_Xray.png)
 
 The proposed gearbox makes use of dual screw nuts preloaded with a spring. The two nuts are pushed apart, forming an anti-backlash nut pair. Bolts are used through the flanges, threaded through a small insert to keep them in place, but not providing clamping force. Therefore, either direction the screw spins, the backlash is taken up.
 
