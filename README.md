@@ -45,9 +45,11 @@ A major consideration when using screws, nuts, or gears is backlash. Backlash is
 
 ![X-Ray](Gearbox_Xray.png)
 
-The proposed gearbox makes use of dual screw nuts preloaded with springs. The two nuts are pushed apart, forming an anti-backlash nut pair. Bolts are used through the flanges, threaded through small hex nuts to keep them in place, but not providing clamping force. Therefore, either direction the screw spins, the backlash is taken up.
+The proposed gearbox makes use of dual screw nuts preloaded with a spring. The two nuts are pushed apart, forming an anti-backlash nut pair. Bolts are used through the flanges to keep the nuts aligned, but not providing clamping force. Therefore, either direction the screw spins, the backlash is taken up.
 
-Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up. The rightmost spring preloads the `Y` gear/nut assembly by pushing it into the `X` gears.
+Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. If they are fully meshed and fit precisely, backlash is taken up.
+
+> The rightmost spring preloads the `Y` gear/nut by pushing it into the `X` gears. Note that the right spring is pushing on the bolt heads, but not on the right nut; this keeps the right nut preloaded to the right.
 
 With any preloading/anti-backlash system, wear is a concern. With proper lubrication on the nuts and gears, and with the proper spring strength, wear should be minimal since the gantry load is relatively small compared to the strength of the materials.
 
