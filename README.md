@@ -45,7 +45,7 @@ A major consideration when using screws, nuts, or gears is backlash. Backlash is
 
 ![Closeup](Gearbox_Section.png)
 
-The proposed gearbox makes use of two screw nuts preloaded with a spring. The two nuts are pushed apart, but have a slot to keep them aligned together, forming an anti-backlash nut pair. Normally the pair is pushed apart with a spring between them, but they can be pushed in from the outside as well, as seen in this example. Therefore, either direction the screw spins, the backlash is taken up.
+The proposed gearbox makes use of two screw nuts preloaded with a spring. The two nuts are pushed in opposite directions, but have a slot to keep them aligned together, forming an anti-backlash nut pair. Normally the pair is pushed apart with a spring between them, but they can be pushed in from the outside as well, as seen in this example. Therefore, either direction the screw spins, the backlash is taken up.
 
 Similarly, the bevel gear teeth can be meshed fully, or separated to some degree. Spacing is chosen for the `Y` gear assembly to keep it fully meshed. If needed, another spring could be added between the gear and gearbox. If they are fully meshed and fit precisely, backlash is taken up.
 
